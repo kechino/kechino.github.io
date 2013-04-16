@@ -1,0 +1,41 @@
+# ドットファイルは無視するけど.gitignoreだけは例外
+.*
+!.gitignore
+
+# 無視する拡張子
+
+*.swp
+*.bak
+*.tmp
+*.log
+*.csv
+
+# 無視するディレクトリ名（どの階層でも有効）
+phpdoc/
+log/
+temp/
+
+# 無視するディレクトリ（ルートからの絶対パス）
+/for_manage/tailconfig/
+/core/i18n/dictionary_preview/
+/for_batch/data/
+
+# Symfonyのキャッシュとログフォルダ
+/Symfony/app/cache/
+/Symfony/app/logs/
+
+# サムネイル画像は自動生成されるのでバージョン管理外
+**/public_html/thumb/*.jpg
+
+# update.shによって出力される設定ファイル
+config.inc.php
+
+# 頭にhogeをつけると無視されるのでデバッグ用のActionとかはhogeActionとかにするとよいです
+hoge*
+
+# その他
+Thumbs.db
+/unit_test/pref.inc.php
+update_marker.tmp
+*~
+
